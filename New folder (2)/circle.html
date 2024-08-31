@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 50px;
+            height: 50px;
+            background-color: blueviolet;
+            animation-name: first;
+            animation-duration: 4s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            position: relative;
+            border-radius: 100px;
+
+        }
+        @keyframes first{
+            0% {background-color: blue; left: 0px; top: 0px;}
+            50% {background-color: brown; left: 250px; top: 100px;}
+            100% {background-color: aquamarine; left: 488px; top: 0px;}
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
