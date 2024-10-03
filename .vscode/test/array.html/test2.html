@@ -35,9 +35,10 @@
 
        //question no 2
        let prices = [250,645,300,900,50];
-        let discountedprices=prices.map(price=>price*0.1);
-       document.write("final prices are :" + discountedprices);
-
+       for (let i = 0; i < prices.length; i++) {
+        prices[i]*=0.9;
+         }
+         console.log(prices);
 
     </script>
 </body>
