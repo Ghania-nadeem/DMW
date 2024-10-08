@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <input type="text" name="" id="fname" placeholder="enter your email">
+   <p id="print"></p>
+   <button type="submit" onclick="print()">submit</button>
+   <script>
+    function print() {
+        var name = document.getElementById("fname").value;
+       var exp =/^(A-z) (10-100)gm$/gm
+       if (exp.test(name)) {
+        document.getElementById("print"). innerHTML = email;
+        document.getElementById("print").style.color = "green" ;
+       } else {
+        document.getElementById("print").innerHTML = "incorrect";
+        document.getElementById("print").style.color = "red";  
+       }
+    }
+      </script>
+</body>
+</html>
