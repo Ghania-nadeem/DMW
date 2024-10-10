@@ -6,23 +6,31 @@
     <title>Document</title>
 </head>
 <body>
-   <input type="text" name="" id="fname" placeholder="enter your name">
-   <p id="print"></p>
+   <input type="text" name="" id="name" placeholder="enter your name">
+   <input type="text" name="" id="email" placeholder="enter your email">
+   <input type="text" name="" id="number" placeholder="enter your number">
+   <p id="msg"></p>
    <button type="submit" onclick="print()">submit</button>
    <script>
     function print() {
-        var name = document.getElementById("fname").value;
-       var exp =/^(A-z) (10-100)gm$/gm
+        var name = document.getElementById("name").value;
+       var exp =/^(A-z) (10-100)$/gm;
+       var name = document.getElementById("email").value;
+       var exp=/^[A-z .@]{3,20}$/gm;
+       var name = document.getElementById("number").value;
+       var exp=/^[0-9+-]{11,20}/gm;
        if (exp.test(name)) {
-        document.getElementById("print"). innerHTML = email;
-        document.getElementById("print").style.color = "green" ;
+        document.getElementById('msg').innerHTML = "valid";
+        document.getElementById('msg').style.color = "green" ;
        } else {
-        document.getElementById("print").innerHTML = "incorrect";
-        document.getElementById("print").style.color = "red";  
+        document.getElementById('msg').innerHTML = "invalid";
+        document.getElementById('msg').style.color = "red";  
        }
     }
-
-      
-      </script>
+    </script>
 </body>
+
+
+
+    
 </html>
