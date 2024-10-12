@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="index.html">
+        <input type="email" name="" id="femail"placeholder="enter your email"required>
+        <input type="password" name="" id="fpass"placeholder="enter your password"required>
+        <button type="submit"onclick="signup()">sign-up</button>
+    </form> 
+    <script>
+        function sinup() {
+            var email = document.getElementById('femail').value;
+            var password = document.getElementById('fpassword').value;
+            var local_email = localStorage.getItem('email');
+            var local_password = localStorage.getItem('password');
+            if (email != "" && pass != "") {
+                if (email == local_email && password == local_password ) {
+                    alert("login successful");
+                } else {
+                    alert("login failed");
+                }
+            }
+            else{
+                alert("please fill in the required fields");
+            }
+        }
+    </script>
+</body>
+</html>
