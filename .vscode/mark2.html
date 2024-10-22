@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>students detail</h1>
+    <input type="text" name=""id="sname"placeholder="enter your name"required>
+    <input type="text"  name=""id="sinstitude"placeholder="enter your institude"required>
+    <input type="text"  name=""id="sbatch"placeholder="enter your batch"required>
+    <h1>marks detail</h1>
+    <input type="text"  name=""id="shtml"placeholder="enter your html"required>
+    <input type="text"  name=""id="scss"placeholder="enter your css"required>
+    <input type="text"  name=""id="sjs"placeholder="enter your js"required>
+    <button>submit</button>
+
+    <table border="1">
+        <th>name</th>
+        <th>institude</th>
+        <th>batch</th>
+        <th>html</th>
+        <th>css</th>
+        <th>javascript</th>
+        <th>obtained marks</th>
+        <th>percentage</th>
+        <th>grade</th>
+        <th>remove</th>
+    </tr>
+        <td id="p-name"></td>
+        <td id="p-institude"></td>
+        <td id="p-batch"></td>
+        <td id="p-html"></td>
+        <td id="p-css"></td>
+        <td id="p-javascript"></td>
+</tr>
+    </table>
+
+    <script>
+        function marks() {
+            var name = document.getElementById('name').value;
+            document.getElementById('name').innerHTML = name;
+            var ins = document.getElementById('institude').value;
+            document.getElementById('institude').innerHTML = ins;
+            var batch = document.getElementById('batch').value;
+            document.getElementById('batch').innerHTML = batch;
+            var html = document.getElementById('html').value;
+            document.getElementById('html').innerHTML = html;
+            var css = document.getElementById('css').value;
+            document.getElementById('css').innerHTML = css;
+            var javascript = document.getElementById('js').value;
+            document.getElementById('js').innerHTML = js;
+        }
+    </script>
+   
+</body>
+</html>
