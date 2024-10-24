@@ -14,7 +14,7 @@
     <input type="text"  name=""id="shtml"placeholder="enter your html"required>
     <input type="text"  name=""id="scss"placeholder="enter your css"required>
     <input type="text"  name=""id="sjs"placeholder="enter your js"required>
-    <button>submit</button>
+    <button type="submit" onclick = "marks()">submit</button>
 
     <table border="1">
         <th>name</th>
@@ -23,7 +23,7 @@
         <th>html</th>
         <th>css</th>
         <th>javascript</th>
-        <th>obtained marks</th>
+        <th>obtained</th>
         <th>percentage</th>
         <th>grade</th>
         <th>remove</th>
@@ -34,24 +34,81 @@
         <td id="p-html"></td>
         <td id="p-css"></td>
         <td id="p-javascript"></td>
+        <td id="p-ob"></td>
+        <td id="p-per"></td>
+        <td id="p-grade"></td>
+        <td>
+            <button type="submit" onclick="remove()">delete</button>
+        </td>
 </tr>
     </table>
 
     <script>
         function marks() {
-            var name = document.getElementById('name').value;
-            document.getElementById('name').innerHTML = name;
-            var ins = document.getElementById('institude').value;
-            document.getElementById('institude').innerHTML = ins;
-            var batch = document.getElementById('batch').value;
-            document.getElementById('batch').innerHTML = batch;
-            var html = document.getElementById('html').value;
-            document.getElementById('html').innerHTML = html;
-            var css = document.getElementById('css').value;
-            document.getElementById('css').innerHTML = css;
-            var javascript = document.getElementById('js').value;
-            document.getElementById('js').innerHTML = js;
+            var name = document.getElementById('sname').value;
+            document.getElementById('p-name').innerHTML = name;
+            localStorage.setItem('name', name);
+            var ins = document.getElementById('sinstitude').value;
+            document.getElementById('p-institude').innerHTML = ins;
+            localStorage.setItem('institude', ins);
+            var batch = document.getElementById('sbatch').value;
+            document.getElementById('p-batch').innerHTML = batch;
+            localStorage.setItem('batch', batch);
+            var html = document.getElementById('shtml').value;
+            document.getElementById('p-html').innerHTML = html;
+            localStorage.setItem('html', html);
+            var css = document.getElementById('scss').value;
+            document.getElementById('p-css').innerHTML = css;
+            localStorage.setItem('css', css);
+            var javascript = document.getElementById('sjs').value;
+            document.getElementById('p-javascript').innerHTML = javascript;
+            localStorage.setItem('javascript', js);
+            var obtained =parseInt(html) + parseInt(css) + parseInt(javascript);
+            document.getElementById('p-ob').innerHTML =obtained;
+            localStorage.setItem('obtained', ob);
+
+            var per = ((obtained/300)*100).toFixed(2);
+            document.getElementById('p-per').innerHTML =per+ "%";
+            localStorage.setItem('percentage', per);
+
+            if (per >=80 && per <= 100) {
+                var grade =document.getElementById('p-grade').innerHTML = "A+";
+            } else if(per >=70 && per <=80) {
+                var grade =document.getElementById('p-grade').innerHTML = "A";
+            }
+         else if(per >=60 && per <=70) {
+            var grade = document.getElementById('p-grade').innerHTML = "B";
+            }
+        else if(per >= 50 && per <=60) {
+            var grade =  document.getElementById('p-grade').innerHTML = "C";
+            }
+         else if(per >=40 && per <=50) {
+            var grade = document.getElementById('p-grade').innerHTML = "D";
+            }
+            else if ( per >=0 && per <= 40){
+                var grade = document.getElementById('p-grdade').innerHTML = "fail";
+            }
+            else{
+               var grade = document.getElementById('p-grade').innerHTML = "invalid marks";
+                }
+                localStorage.setItem('grade' , grade);
         }
+
+        function remove(){
+            localStorage.removeItem('name');
+            localStorage.removeItem('institude');
+            localStorage.removeItem('batch');
+            localStorage.removeItem('html');
+            localStorage.removeItem('css');
+            localStorage.removeItem('js');
+            localStorage.removeItem('obtained');
+            localStorage.removeItem('percentage');
+            localStorage.removeItem('grade');
+        }
+            
+                
+            
+        
     </script>
    
 </body>
