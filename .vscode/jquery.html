@@ -14,6 +14,10 @@
      <button id="showbtn">show</button>
      <button id="togglebtn">toggle</button>
 
+     <button id="slideup">slideup</button>
+     <button id="slidedown">slidedown</button>
+     <button id="slidetoggle">slidetoggle</button>
+
     <script>
         $(document).ready(function (){
         $("div").css({
@@ -30,6 +34,15 @@
         })
         $("#togglebtn").click(function(){
             $("div").toggle(3000)
+        })
+        $("#slideup").click(function(){
+            $("div").slideUp (3000)
+        })
+        $("#slidedown").click(function(){
+            $("div").slideDown(3000)
+        })
+        $("#slidetoggle").click(function(){
+            $("div").slideToggle(3000)
         })
         });
     </script>
