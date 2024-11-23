@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        background-color: rgb(100, 90, 99);
+        color: aqua;
+        text-align: center;
+    }
+    header,footer{
+        background-color: lightgreen ;
+        color: rgb(58, 47, 173);
+        padding: 50px;
+    }
+    main{
+        padding: 50px;
+    }
+
+    /* mobile media query */
+    @media (max-width: 480px){
+    body{
+        background-color: salmon;
+        font-size: 14px;
+    }
+    header,footer{
+        padding: 10px;
+        font-size: 1rem;
+    }
+    main{
+        padding: 15px;
+    }
+    }
+
+     /* tablet media query */
+     @media (max-width: 480px){
+    body{
+        background-color: rgb(165, 191, 153);
+        font-size: 14px;
+    }
+    header,footer{
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+    main{
+        padding: 25px;
+    }
+    }
+
+      /* desktop media query */
+      @media (min-width: 769px){
+    body{
+        background-color: rgb(241, 163, 114);
+        font-size: 18px;
+    }
+    header,footer{
+        padding: 15px;
+        font-size: 1.2rem;
+    }
+    main{
+        padding: 25px;
+    }
+    }
+</style>
+<body>
+    <header>
+        <h1>responsive web design</h1>
+    </header>
+
+    <main>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis cupiditate 
+            veniam laboriosam voluptatibus tempora, recusandae delectus nulla explicabo animi dolores,
+             consectetur nostrum. Quam ipsa ullam similique obcaecati. Dignissimos doloremque error magnam
+             necessitatibus excepturi officiis. Molestias sit illum rerum nostrum et delectus tempore dolorum id tenetur.</p>
+    </main>
+
+    <footer>
+        <p>copy 2024 responsive web design</p>
+    </footer>
+</body>
+</html>
