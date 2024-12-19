@@ -10,6 +10,11 @@
     <div>
         <h1>jquery class 2</h1>
     </div>
+
+
+    <ul id="mylist">
+        <!-- <li>banana</li> -->
+    </ul>
      <button id="hidebtn">hide</button>
      <button id="showbtn">show</button>
      <button id="togglebtn">toggle</button>
@@ -23,8 +28,44 @@
      <button id="fadetoggle">fade toggle</button>
      <button id="fadeto">fade to</button> 
 
+  
+
+
+     <input type="text" name="" id="usertext" placeholder="Enter Fruits">
+   <button id="btnappend">Append</button>
+     <button id="btnprepend">prepend</button> 
+
+     <ul id="mylist">
+      
+    </ul>
     <script>
         $(document).ready(function (){
+
+//             $("#btnappend").click(function () {
+//                 $("#mylist").append("<li>apple</li>")
+
+//             });
+
+//             $("#btnprepend").click(function () {
+//                 $("#mylist").prepend("<li>orange</li>")
+//  });
+
+        $("#btnappend").click(function() {
+            var userinput = $("usertext").val();
+            $("#mylist").append("<li>" + userinput + "</li>");
+        })
+
+        
+        $("#btnprepend").click(function() {
+            var userinput = $("usertext").val();
+            $("#mylist").prepend("<li>" + userinput + "</li>");
+        })
+
+
+
+
+
+
         $("div").css({
         "border": "2px groove blue",
         "background-color" : "pink",
@@ -95,26 +136,18 @@
     })
     $("body").keydown(function () {
         $(this).css({
-            "background-color" : "orange"  
+            "background-color" : "brown"  
         })
     })
-    $("body").keypress(function () {
+    $("body").keypress(function (){
         $(this).css({
             "background-color" : "aqua"  
         })
     })
     $("body").keyup(function () {
         $(this).css({
-            "background-color" : "pink"   
+            "background-color" : "purple"   
          })
         });
  </script>
-</body>
-</html>
-      
-      
-     
-      
-    </script>
-    
 </body>
