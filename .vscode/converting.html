@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+     
+
+     <DIV id="resultDIV"></DIV>
+
+     <script>
+        $(document).ready(function(){
+            var JSONString = '[{"firstname":"john","lastname":"doe","age":50,"salary":60000},{"firstname":"john","lastname":"doe","age":44,"salary":70000}]'
+            var employee = JSON.parse(JSONString);
+            var result="";
+            $.each(employee , function( i , item){
+                result += "firstname :" +" "+ item.firstname+ "<br>";
+                result += "lastname :" +" "+ item.lastname + "<br>";
+                result += "age :" +" "+ item.age+ "<br>";
+                result += "salary :" +" "+ item.salary+ "<br>";
+            });
+            $('#resultDIV').html(result);
+        });
+     </script>
+</body>
+</html>
