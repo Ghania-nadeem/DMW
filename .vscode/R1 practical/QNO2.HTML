@@ -15,7 +15,19 @@
     //     alert("you data are not founded");
     //    }
 
-    
+    let array = ['apple', 'banana', 'cherry']; // The array to search in
+let itemToSearch = 'banana'; // The item to search for
+let result = [];
+
+// Check if the item exists in the array
+if (array.includes(itemToSearch)) {
+  result.push('found');
+} else {
+  result.push('not found');
+}
+
+console.log(result); // Outputs: ['found']
+
     </SCRipt>
 </body>
 </html>
