@@ -5,19 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    
-<input type="text" name="" id="v_fruit" placeholder="Enter a fruit name">
+<body>   
+<input type="text" name="" id="g_fruit" placeholder="Enter a fruit name">
 <button type="submit" onclick="show()">Submit</button>
-
 <script>
 function show() {
-    var fruits = document.getElementById('v_fruit').value; 
-    var v_fruit = ["mango", "apple", "kiwi"];
-
-
-    if (v_fruit.includes(fruits)) {
-    document.write("Found");
+    var fruits = document.getElementById('g_fruit').value; 
+    var g_fruit = ["mango", "apple", "kiwi", "peach" , "banana", "orange"];
+    if (g_fruit.includes(fruits)) {
+    document.write("found");
 } else {
     document.write("Not found");
 }
